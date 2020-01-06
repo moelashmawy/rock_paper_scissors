@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rock, Paper, Scissors</title>
+    </head>
+
+    <body>
+        <script>
+            
+           //initialize the computer and user scored to 0
+           let computerScore = 0;
+           let uScore = 0;
+
+            //assign the computerPlay result which is a random choice to a variable computer Selection
+            let computerSelection = computerPlay();
+            //we will prompot the user for his choice
+            let uChoice = prompt("What's your choice?");
+            playerSelection = uChoice;
+
+            // this function takes computer selection and compares it with player selection and decides who wins
+            function playRound(playerSelection, computerSelection) {
+                if(computerSelection === "rock" && playerSelection === "rock"
+                    || computerSelection === "paper" && playerSelection === "paper"
+                    || computerSelection === "scissors" && playerSelection === "scissors") {
+                    console.log("It's a tie");
+                } else if(computerSelection === "rock" && playerSelection === "scissors"
+                    || computerSelection === "scissors" && playerSelection === "paper"
+                    || computerSelection === "paper" && playerSelection === "rock") {
+                    computerScore++;
+                    console.log("Computer wins");
+                } else {
+                    uScore++;
+                    console.log("You win");
+                }
+            }
+
+            function play() {
+                playRound(playerSelection, computerSelection);
+                playRound(playerSelection, computerSelection);
+                playRound(playerSelection, computerSelection);
+                playRound(playerSelection, computerSelection);
+                playRound(playerSelection, computerSelection);
+            }
+
+             //computer choose a random choice
+             function computerPlay() {
+                let comPlay;
+                comPlay = Math.random();
+                if(comPlay < .33) {
+                    return "rock";
+                }else if(comPlay < .66) {
+                    return "paper";
+                } else {
+                    return "scissors";
+                }
+            }
+
+            //start the game
+            play();    
+        
+        </script>
+    </body>
+</html>
