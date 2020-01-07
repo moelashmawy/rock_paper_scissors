@@ -1,0 +1,42 @@
+h1{
+    text-align: center;
+}
+
+#choices{
+    text-align: center;
+    background-color: antiquewhite;
+    margin-top: 50px;
+    padding: 0px 50px 0px ;
+}
+
+#choices button{
+    display: inline-block;
+    margin: 55px;
+    background-color: whitesmoke;
+}
+
+#choices button:hover{
+    box-shadow: 0 0 5px rgb(12, 13, 14);
+}
+
+#dashBoard{
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    border: 5px solid antiquewhite;
+    height: 120px;
+    width: 300px;
+}
+
+#result{
+    text-align: center;
+    margin-top: 70px;
+    line-height: 25px;
+}
+
+#tieBoard{
+    border-top: 5px solid rgb(247, 229, 206);
+    position: static;
+    text-align: center;
+    line-height: 150%;
+}
